@@ -1,3 +1,3 @@
 import streamlit as st
-from snowflake.connector import DictCursor
+conn = st.connection("snowflake")
 st.title("Snowflake Streamlit App")

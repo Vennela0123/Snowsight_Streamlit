@@ -34,7 +34,7 @@ def main():
     snowflake_database=default_snowflake_database
     snowflake_schema=default_snowflake_schema
     snowflake_warehouse=default_snowflake_warehouse
-    query='SELECT * FROM MANPOWER_TGT Limit 5'
+    query='SELECT EMP_CTR AS "Category",COUNT(*) AS "No Of Employees" FROM MANPOWER_TGT GROUP BY 1'
     if st.button("Execure Query"):
         cursor,result=execute_snowflake_query(
             query,

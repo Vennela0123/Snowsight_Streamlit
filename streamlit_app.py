@@ -1,3 +1,3 @@
 import streamlit as st
-import snowflake.connector
+conn = st.connection("snowflake")
 st.title("Snowflake Streamlit App")
